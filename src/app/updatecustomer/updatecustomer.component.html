@@ -1,0 +1,47 @@
+<div id="outPopUp" class="">
+    <div class="">
+  
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errormsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  
+          <!--to show success alert-->
+          <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successmsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+  <br><br>
+          <div align="center">
+            <img  src="https://ww1.prweb.com/prfiles/2014/05/23/11876677/logo_gloriafood_PNG.png" style="height: 100px;">
+            <br><br>
+        <form  [formGroup]="customerForm" >
+         
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control" formControlName="cust_name" placeholder="Customer Name">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="cust_email" placeholder="Customer Email">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="cust_phone" placeholder="Customer Phone Number">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="cust_addr" placeholder="Customer address">
+          </div>
+          <br>
+  
+          <div  align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="customerUpdate()">
+            <button >Confirm Update🧑</button>
+        </div>
+  
+        </form>
+  
+      </div>
+    </div>
+  
